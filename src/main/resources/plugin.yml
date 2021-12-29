@@ -1,0 +1,6 @@
+name: Supaadvanceplugin
+version: '${project.version}'
+main: com.advancedplugin.plugin.supaadvanceplugin.Supaadvanceplugin
+api-version: 1.18
+authors: [ tonik152 ]
+description: Best advanced plugin ever made!!!!

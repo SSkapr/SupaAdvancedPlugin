@@ -1,5 +1,6 @@
-package com.advancedplugin.plugin.supaadvanceplugin
+package com.advancedplugin.plugin.supaadvanceplugin.Events
 
+import com.advancedplugin.plugin.supaadvanceplugin.Core.CustomItems
 import org.bukkit.Material
 import org.bukkit.entity.Item
 import org.bukkit.entity.Player
@@ -13,7 +14,7 @@ import org.bukkit.potion.PotionEffectType
 
 
 @Suppress( "DEPRECATION")
-class BoneRepair: Listener {
+class BoneRepair: Listener, CustomItems() {
 
     @EventHandler
     fun onFixerClick(event: PlayerInteractEvent){
@@ -23,8 +24,8 @@ class BoneRepair: Listener {
         val boneFixer = ItemStack(Material.ARMOR_STAND)
         if((event.action == Action.RIGHT_CLICK_AIR || event.action == Action.RIGHT_CLICK_BLOCK ||
                     event.action == Action.LEFT_CLICK_AIR || event.action == Action.LEFT_CLICK_BLOCK)
-             && event.item?.type == Material.ARMOR_STAND && event.item?.itemMeta?.displayName == "Bone Fixer" &&
-            event.player.inventory.itemInOffHand.itemMeta?.displayName != "Bone Fixer"){
+             && event.item?.type == Material.STICK && event.item == CustomItems.BoneFixer &&
+            event.player.inventory.itemInOffHand != CustomItems.BoneFixer){
             var used: Boolean = false
 
 
@@ -36,8 +37,8 @@ class BoneRepair: Listener {
         }
         else if((event.action == Action.RIGHT_CLICK_AIR || event.action == Action.RIGHT_CLICK_BLOCK ||
                     event.action == Action.LEFT_CLICK_AIR || event.action == Action.LEFT_CLICK_BLOCK)
-            && event.item?.type == Material.ARMOR_STAND && event.item?.itemMeta?.displayName == "Bone Fixer" &&
-            event.player.inventory.itemInMainHand.itemMeta?.displayName != "Bone Fixer"){
+            && event.item?.type == Material.STICK && event.item == CustomItems.BoneFixer  &&
+            event.player.inventory.itemInMainHand != CustomItems.BoneFixer){
             var used: Boolean = false
 
 

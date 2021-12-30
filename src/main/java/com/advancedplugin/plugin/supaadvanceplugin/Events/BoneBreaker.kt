@@ -1,4 +1,4 @@
-package com.advancedplugin.plugin.supaadvanceplugin
+package com.advancedplugin.plugin.supaadvanceplugin.Events
 
 import org.bukkit.Bukkit
 import org.bukkit.ChatColor
@@ -19,7 +19,7 @@ class BoneBreaker: Listener {
         if ((event.entity is Player)&&(event.cause == EntityDamageEvent.DamageCause.FALL)&&(event.damage > 5)) {
 
             (event.entity as Player).addPotionEffect(PotionEffect(PotionEffectType.SLOW, 3600, 4))
-            event.entity.sendMessage("You broke your leg")
+            event.entity.sendMessage("§eYou broke your leg")
         }
     }
 

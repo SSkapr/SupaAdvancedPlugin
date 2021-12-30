@@ -1,6 +1,11 @@
 name: Supaadvanceplugin
 version: '${project.version}'
-main: com.advancedplugin.plugin.supaadvanceplugin.Supaadvanceplugin
+main: com.advancedplugin.plugin.supaadvanceplugin.Main.Supaadvanceplugin
 api-version: 1.18
 authors: [ tonik152 ]
 description: Best advanced plugin ever made!!!!
+
+commands:
+  getdafixer:
+    description: Get you da fixer
+    usage: /<command>

@@ -14,6 +14,7 @@ class Supaadvanceplugin : JavaPlugin() {
 
 
         CustomItems().initialize()
+
         getCommand("getdafixer")?.setExecutor(GetBoneFixerCommand())
         server.pluginManager.registerEvents(BoneBreaker(),this)
         server.pluginManager.registerEvents(BoneRepair(),this)

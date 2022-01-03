@@ -1,6 +1,6 @@
 package com.advancedplugin.plugin.supaadvanceplugin.Commands
 
-import com.advancedplugin.plugin.supaadvanceplugin.Core.CustomItems
+import com.advancedplugin.plugin.supaadvanceplugin.Core.CustomItems.CustomItems
 import org.bukkit.command.Command
 import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
@@ -13,6 +13,7 @@ class GetBoneFixerCommand: CommandExecutor {
         val player: Player = sender as Player
         if(command.name.equals("getdafixer")){
             player.inventory.addItem(CustomItems.BoneFixer)
+            player.inventory.addItem(CustomItems.Boooster)
         }
 
 

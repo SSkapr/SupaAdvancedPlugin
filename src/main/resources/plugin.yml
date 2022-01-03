@@ -9,3 +9,4 @@ commands:
   getdafixer:
     description: Get you da fixer
     usage: /<command>
+

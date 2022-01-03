@@ -3,8 +3,9 @@ package com.advancedplugin.plugin.supaadvanceplugin.Main
 import com.advancedplugin.plugin.supaadvanceplugin.Events.BoneBreaker
 import com.advancedplugin.plugin.supaadvanceplugin.Events.BoneRepair
 import com.advancedplugin.plugin.supaadvanceplugin.Commands.GetBoneFixerCommand
-import com.advancedplugin.plugin.supaadvanceplugin.Core.CustomItems
-import com.advancedplugin.plugin.supaadvanceplugin.Events.SameItemChecker
+import com.advancedplugin.plugin.supaadvanceplugin.Core.CustomItems.CustomItems
+import com.advancedplugin.plugin.supaadvanceplugin.Core.MakeCustomItems
+import com.advancedplugin.plugin.supaadvanceplugin.Core.SameItemChecker
 import org.bukkit.plugin.java.JavaPlugin
 
 class Supaadvanceplugin : JavaPlugin() {
@@ -13,7 +14,7 @@ class Supaadvanceplugin : JavaPlugin() {
         logger.info("Enabled")
 
 
-        CustomItems().initialize()
+        MakeCustomItems().initializeItems()
 
         getCommand("getdafixer")?.setExecutor(GetBoneFixerCommand())
         server.pluginManager.registerEvents(BoneBreaker(),this)

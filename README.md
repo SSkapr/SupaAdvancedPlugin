@@ -5,3 +5,4 @@ This is just me experimentig and learning different things you can do with Minec
 Dont tak it seriously
 
 current features: -bone breaking, bone fixing
+                  -boosting player

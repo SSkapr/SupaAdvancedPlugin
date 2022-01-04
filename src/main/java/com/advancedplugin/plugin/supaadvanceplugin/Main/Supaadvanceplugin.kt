@@ -3,9 +3,10 @@ package com.advancedplugin.plugin.supaadvanceplugin.Main
 import com.advancedplugin.plugin.supaadvanceplugin.Events.BoneBreaker
 import com.advancedplugin.plugin.supaadvanceplugin.Events.BoneRepair
 import com.advancedplugin.plugin.supaadvanceplugin.Commands.GetBoneFixerCommand
-import com.advancedplugin.plugin.supaadvanceplugin.Core.CustomItems.CustomItems
+import com.advancedplugin.plugin.supaadvanceplugin.Core.CustomItems.Booster
 import com.advancedplugin.plugin.supaadvanceplugin.Core.MakeCustomItems
 import com.advancedplugin.plugin.supaadvanceplugin.Core.SameItemChecker
+import com.advancedplugin.plugin.supaadvanceplugin.Events.BooosterBoost
 import org.bukkit.plugin.java.JavaPlugin
 
 class Supaadvanceplugin : JavaPlugin() {
@@ -20,6 +21,7 @@ class Supaadvanceplugin : JavaPlugin() {
         server.pluginManager.registerEvents(BoneBreaker(),this)
         server.pluginManager.registerEvents(BoneRepair(),this)
         server.pluginManager.registerEvents(SameItemChecker(),this)
+        server.pluginManager.registerEvents(Booster(),this)
 
 
     }

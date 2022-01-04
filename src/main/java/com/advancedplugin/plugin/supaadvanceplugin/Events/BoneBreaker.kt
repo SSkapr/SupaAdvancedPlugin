@@ -17,16 +17,20 @@ class BoneBreaker: Listener {
 
     @EventHandler
     fun onFallBreakbones(event: EntityDamageEvent) {
-        val player: BetterPlayer = BetterPlayer(event.entity as Player)
-        val eventPotionEffect: PotionEffect = PotionEffect(PotionEffectType.SLOW, 3600, 4)
+        if(event.entity is Player){
+            val player: BetterPlayer = BetterPlayer(event.entity as Player)
+            val eventPotionEffect: PotionEffect = PotionEffect(PotionEffectType.SLOW, 3600, 4)
 
-        if ((player.player is Player)&&(event.cause == EntityDamageEvent.DamageCause.FALL)&&(event.damage > 5)) {
-            player.currentPotionStatuses.add(PotionEffect(PotionEffectType.SLOW, 3600, 4))
+            if ((player.player is Player)&&(event.cause == EntityDamageEvent.DamageCause.FALL)&&(event.damage > 5)) {
+                player.currentPotionStatuses.add(PotionEffect(PotionEffectType.SLOW, 3600, 4))
 
 
-            (event.entity as Player).addPotionEffect(PotionEffect(PotionEffectType.SLOW, 3600, 4))
-            event.entity.sendMessage("§eYou broke your leg")
+                (event.entity as Player).addPotionEffect(PotionEffect(PotionEffectType.SLOW, 3600, 4))
+                event.entity.sendMessage("§eYou broke your leg")
+            }
         }
+
+
     }
 
 }

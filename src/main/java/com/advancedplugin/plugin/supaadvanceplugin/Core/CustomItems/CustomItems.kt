@@ -3,9 +3,9 @@ package com.advancedplugin.plugin.supaadvanceplugin.Core.CustomItems
 import org.bukkit.Bukkit
 import org.bukkit.Material
 import org.bukkit.NamespacedKey
-import org.bukkit.inventory.ItemStack
 import org.bukkit.enchantments.Enchantment
 import org.bukkit.inventory.ItemFlag
+import org.bukkit.inventory.ItemStack
 import org.bukkit.inventory.ShapedRecipe
 
 
@@ -55,7 +55,9 @@ open class CustomItems {
         BooosterLore.add("§cYou need to hold only one to use it!!!!")
         BooosterLore.add("§cWont work when you have this item in both hands!!!!!")
         Boooster_meta.setLore(BooosterLore)
+     //   Boooster_meta.setDurability(364.toShort())
         itmBoooster.setItemMeta(Boooster_meta)
+
         Boooster = itmBoooster
 
 

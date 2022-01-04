@@ -17,16 +17,16 @@ class SameItemChecker: Listener {
 
         if((_action == Action.RIGHT_CLICK_AIR || _action == Action.RIGHT_CLICK_BLOCK ||
                     _action == Action.LEFT_CLICK_AIR || _action == Action.LEFT_CLICK_BLOCK)
-            && _itemType == Material.STICK && _item == CustomItems.BoneFixer &&
-            _itemInOffHand != CustomItems.BoneFixer){
+            && /*_itemType == Material.STICK &&*/ _item == _item &&
+            _itemInOffHand != _item){
 
 
            return 1
         }
         else if((_action == Action.RIGHT_CLICK_AIR || _action == Action.RIGHT_CLICK_BLOCK ||
                     _action == Action.LEFT_CLICK_AIR || _action == Action.LEFT_CLICK_BLOCK)
-            && _itemType == Material.STICK && _item == CustomItems.BoneFixer  &&
-            _itemInMainHand != CustomItems.BoneFixer){
+            && /*_itemType == Material.STICK &&*/ _item == _item  &&
+            _itemInMainHand != _item){
 
 
 
